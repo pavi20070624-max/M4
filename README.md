@@ -10,6 +10,24 @@ To write a C Program to perform the basic left shift operation for 44 integer nu
 5.	Stop the program.
 
 ## PROGRAM
+```c
+#include <stdio.h>
+
+int main() {
+    int num = 44;
+    int shifts = 3;
+    int result;
+
+    // Perform left shift
+    result = num << shifts;
+
+    printf("Original number: %d\n", num);
+    printf("Number after left shifting by %d positions: %d\n", shifts, result);
+
+    return 0;
+}
+
+```
 
 ## OUTPUT
 
@@ -47,6 +65,26 @@ Write a C Program to check whether the two numbers are equal or not using simple
 5.	Stop the program.
 
 ## PROGRAM
+```c
+#include <stdio.h>
+int main() {
+    int num1, num2;
+
+    // Read two numbers from user
+    printf("Enter the first number: ");
+    scanf("%d", &num1);
+
+    printf("Enter the second number: ");
+    scanf("%d", &num2);
+
+    // Check equality using simple if
+    if (num1 == num2) {
+        printf("The numbers are equal.\n");
+    }
+
+    return 0;
+}
+```
 
 
 ## OUTPUT
@@ -70,6 +108,32 @@ Write a C Program to convert the given string into lowercase.
 5.	Stop the program.
 
 ## PROGRAM
+```c
+#include <stdio.h>
+#include <ctype.h>   // for tolower()
+#include <string.h>  // for string functions
+
+int main() {
+    char str[100];
+
+    // Read string from user
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    // Remove newline character if present
+    str[strcspn(str, "\n")] = '\0';
+
+    // Convert each character to lowercase
+    for (int i = 0; i < strlen(str); i++) {
+        str[i] = tolower(str[i]);
+    }
+
+    // Print the lowercase string
+    printf("Lowercase string: %s\n", str);
+
+    return 0;
+}
+```
 
 ## OUTPUT
 
@@ -95,6 +159,48 @@ Write a C Program to count the total number of words in a given string using do 
 6.	Stop the program.
 
 ## PROGRAM
+```c
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char str[200];
+    int i = 0, wordCount = 0;
+
+    // Read string from user
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    // Remove newline character if present
+    str[strcspn(str, "\n")] = '\0';
+
+    int len = strlen(str);
+
+    // Count words using do-while loop
+    do {
+        // Skip spaces
+        while (i < len && isspace(str[i])) {
+            i++;
+        }
+
+        // If not end of string, count word
+        if (i < len) {
+            wordCount++;
+
+            // Move to the end of the word
+            while (i < len && !isspace(str[i])) {
+                i++;
+            }
+        }
+    } while (i < len);
+
+    printf("Total number of words: %d\n", wordCount);
+
+    return 0;
+}
+
+```
 
 ## OUTPUT
 
@@ -129,6 +235,49 @@ Step 7: After the loop, check the value of flag:
 Step 8: End the program.
 
 ## PROGRAM
+```c
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+    char str1[100], str2[100];
+    int i = 0, flag = 0;
+
+    // Read two strings
+    printf("Enter the first string: ");
+    fgets(str1, sizeof(str1), stdin);
+    printf("Enter the second string: ");
+    fgets(str2, sizeof(str2), stdin);
+
+    // Remove newline characters if present
+    str1[strcspn(str1, "\n")] = '\0';
+    str2[strcspn(str2, "\n")] = '\0';
+
+    // Compare strings character by character
+    while (str1[i] != '\0' && str2[i] != '\0') {
+        if (str1[i] != str2[i]) {
+            flag = 1; // strings are different
+            break;
+        }
+        i++;
+    }
+
+    // If one string is longer than the other
+    if (str1[i] != '\0' || str2[i] != '\0') {
+        flag = 1;
+    }
+
+    // Print result
+    if (flag == 0)
+        printf("The strings are equal.\n");
+    else
+        printf("The strings are not equal.\n");
+
+    return 0;
+}
+
+```
+
 
 
 ## OUTPUT
