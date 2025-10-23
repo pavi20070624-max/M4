@@ -30,6 +30,7 @@ int main() {
 ```
 
 ## OUTPUT
+<img width="425" height="186" alt="image" src="https://github.com/user-attachments/assets/b050b577-3320-4680-ac57-d3f98123e21c" />
 
 
 
@@ -88,6 +89,8 @@ int main() {
 
 
 ## OUTPUT
+<img width="346" height="198" alt="image" src="https://github.com/user-attachments/assets/20750703-3fb5-4881-a0af-622aaae51815" />
+
            
 ## RESULT
 
@@ -136,6 +139,7 @@ int main() {
 ```
 
 ## OUTPUT
+<img width="354" height="190" alt="image" src="https://github.com/user-attachments/assets/cbc9cc7b-6d5d-4988-9ddf-c3dfaa9b92f0" />
 
 
 
@@ -204,6 +208,7 @@ int main() {
 
 ## OUTPUT
 
+<img width="316" height="163" alt="image" src="https://github.com/user-attachments/assets/98eb3ad2-f289-4f2b-acb2-4e50e503fcfe" />
 
 
 
@@ -281,7 +286,8 @@ int main() {
 
 
 ## OUTPUT
- 
+ <img width="329" height="194" alt="image" src="https://github.com/user-attachments/assets/0a802d6f-cd01-4716-b91a-fc5e33e0bb1b" />
+
 
 ## RESULT
 Thus the C Program to compare two strings without using strcmp() has been executed successfully.
